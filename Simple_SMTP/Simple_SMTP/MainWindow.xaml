@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox
+            Name="TestTextBox"
+            Width="200"
+            Height="40"
+            Text="Enter Email Address..."
+            VerticalAlignment="Center"
+            VerticalContentAlignment="Center"
+            Foreground="Gray"></TextBox>
     </Grid>
 </Window>

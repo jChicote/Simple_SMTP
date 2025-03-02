@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 
 namespace Simple_SMTP
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -21,4 +22,5 @@ namespace Simple_SMTP
             InitializeComponent();
         }
     }
+
 }
