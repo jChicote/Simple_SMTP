@@ -1,0 +1,58 @@
+﻿<Window x:Class="Simple_SMTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simple_SMTP"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF3D3B4A">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- First Row -->
+        <Grid Grid.Row="0" Height="60">
+            <Rectangle HorizontalAlignment="Left"
+                       Height="80"
+                       Width="800"
+                       Margin="0,0,0,0"
+                       VerticalAlignment="Top"
+                       Fill="#FF1D1C23"/>
+            <TextBlock Text="Simple Email" Foreground="White" FontSize="28" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        </Grid>
+
+        <!-- Second Row -->
+        <Grid Grid.Row="1" Height="370">
+
+            <!--<ItemsControl ItemsSource="{Binding MainViewModel.SentEmailMessages}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="3" />
+                        --><!-- Or use a regular Grid with custom layout logic --><!--
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        --><!-- Your repeating content here --><!--
+                        <Border Margin="5" BorderBrush="Gray" BorderThickness="1">
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                                <TextBlock Text="{Binding Description}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>-->
+
+            <!-- Hover / Overlapping elements -->
+            <Button Content="New Mail"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom" Width="140" Height="50" Margin="5,10,20,20" Background="#FF1300FF" Foreground="White" FontSize="18"/>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace Simple_SMTP.Commands
 {
@@ -36,7 +31,7 @@ namespace Simple_SMTP.Commands
 
         #endregion Events
 
-        #region  - - - - - Methods - - - - -
+        #region - - - - - Methods - - - - -
 
         public bool CanExecute(object? parameter)
             => this.CanExecutePredicate.Invoke(parameter);
@@ -47,3 +42,5 @@ namespace Simple_SMTP.Commands
         #endregion Methods
 
     }
+
+}
