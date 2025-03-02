@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Windows.Input;
 using Simple_SMTP.Commands;
 using Simple_SMTP.Models;
+using Simple_SMTP.Views;
 
 namespace Simple_SMTP.ViewModels
 {
@@ -58,7 +58,8 @@ namespace Simple_SMTP.ViewModels
 
         private void CreateNewEmail(object sender)
         {
-            Debug.WriteLine("Command is working");
+            var _EditEmailModalWindow = new EditEmailMessageModal();
+            _EditEmailModalWindow.Show();
         }
 
         #endregion Methods
