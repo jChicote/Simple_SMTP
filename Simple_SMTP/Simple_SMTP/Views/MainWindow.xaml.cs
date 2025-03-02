@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Simple_SMTP.ViewModels;
 
 namespace Simple_SMTP
 {
@@ -20,6 +21,10 @@ namespace Simple_SMTP
         public MainWindow()
         {
             InitializeComponent();
+
+            // Sets the ViewModel to be databinded to the Window's datacontext
+            MainViewModel _MainViewModel = new MainViewModel();
+            this.DataContext = _MainViewModel;
         }
     }
 
