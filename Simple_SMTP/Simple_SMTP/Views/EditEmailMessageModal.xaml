@@ -25,6 +25,7 @@
                 Grid.Row="0"
                 Grid.ColumnSpan="2"
                 Content="Send Email"
+                Command="{Binding SendEmailCommand}"
                 Background="Blue"
                 Foreground="White"
                 HorizontalAlignment="Left"
@@ -64,6 +65,7 @@
                        Margin="5"/>
         </Border>
         <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="{Binding Message.To}"
                  Height="30"
                  Width="Auto"
                  VerticalAlignment="Center"
@@ -72,16 +74,29 @@
         <!-- Third Row -->
         <TextBox Grid.Row="2"
                  Grid.ColumnSpan="2"
-                 Text="Add a subject ..."
+                 Text="{Binding Message.Subject}"
                  Width="480"
                  Height="30"
                  VerticalAlignment="Center"
                  VerticalContentAlignment="Center"
-                 Margin="10,0,10,0" HorizontalAlignment="Center"/>
+                 Margin="10,0,10,0" HorizontalAlignment="Center">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <!-- Check if Text is null or empty -->
+                        <DataTrigger Binding="{Binding Message.Subject, FallbackValue=''}" Value="">
+                            <Setter Property="Text" Value="Enter your text here..." />
+                            <Setter Property="Foreground" Value="Gray"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
 
         <!-- Fourth Row -->
         <TextBox Grid.Row="3"
                  Grid.ColumnSpan="2"
+                 Text="{Binding Message.Body}"
                  Height="300"
                  Margin="10,5,10,-281"></TextBox>
     </Grid>
