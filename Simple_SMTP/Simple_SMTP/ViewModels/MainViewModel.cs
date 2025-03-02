@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
+using Simple_SMTP.Commands;
 using Simple_SMTP.Models;
 
 namespace Simple_SMTP.ViewModels
@@ -11,7 +13,7 @@ namespace Simple_SMTP.ViewModels
 
         public ObservableCollection<EmailMessage> SentEmailMessages { get; set; }
 
-        public ICommand ShowWindowCommand { get; set; }
+        public ICommand NewEmailCommand { get; set; }
 
         #endregion Fields
 
@@ -43,9 +45,24 @@ namespace Simple_SMTP.ViewModels
                 Subject = "Test Message 3",
                 To = "test3@email.com"
             });
+
+            this.NewEmailCommand = new RelayCommand(this.CreateNewEmail, this.CanCreateEmail);
         }
 
         #endregion Constructors
+
+        #region - - - - - Methods - - - - -
+
+        private bool CanCreateEmail(object obj)
+            => true;
+
+        private void CreateNewEmail(object sender)
+        {
+            Debug.WriteLine("Command is working");
+        }
+
+        #endregion Methods
+
     }
 
 }

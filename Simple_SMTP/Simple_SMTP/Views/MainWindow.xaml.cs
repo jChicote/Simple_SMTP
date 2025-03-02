@@ -1,14 +1,18 @@
-﻿using System.Windows;
-using Simple_SMTP.ViewModels;
+﻿using Simple_SMTP.ViewModels;
+using System.Windows;
 
-namespace Simple_SMTP
+namespace Simple_SMTP.Views
 {
+
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        #region - - - - - Constructors - - - - -
+
         public MainWindow()
         {
             InitializeComponent();
@@ -17,6 +21,9 @@ namespace Simple_SMTP
             MainViewModel _MainViewModel = new();
             this.DataContext = _MainViewModel;
         }
+
+        #endregion Constructors
+
     }
 
 }
