@@ -66,6 +66,7 @@ namespace Simple_SMTP.ViewModels
             });
 
             this.NewEmailCommand = new RelayCommand(this.CreateNewEmail, this.CanCreateEmail);
+            this.DisplayLoggedInUserName();
         }
 
         #endregion Constructors
